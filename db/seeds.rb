@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Slots.create(start_time:'2019-02-28T16:00:00.000Z')
+Slots.create(start_time:'2019-02-27T15:00:00.000Z')
+Slots.create(start_time:'2019-02-26T14:00:00.000Z')
