@@ -1,0 +1,2 @@
+class ScheduledInterview < ApplicationRecord
+end

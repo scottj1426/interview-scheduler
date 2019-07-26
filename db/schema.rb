@@ -10,10 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190725204614) do
+ActiveRecord::Schema.define(version: 20190726142656) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "_interviews", force: :cascade do |t|
+    t.text "candidate_name"
+    t.datetime "time_slot"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pages", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "scheduled_interviews", force: :cascade do |t|
+    t.text "candidate_name"
+    t.datetime "time_slot"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "slots", force: :cascade do |t|
     t.datetime "start_time"

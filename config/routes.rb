@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   end
 
   get '/(*path)', to: 'pages#index'
-  get '/slots', to: 'slots#index'
+  get '/employer_schedules', to: 'slots#index'
+  get '/schedule_interview', to: 'interview#create'
 
 end
