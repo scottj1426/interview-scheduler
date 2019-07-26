@@ -1,8 +1,8 @@
 module API
     class SlotsController < ApplicationController
       def create
-        players = Intervew.create(interview_params)
-        render json: players
+        interview = Intervew.create(interview_params)
+        render json: interview
       end
 
       private 
