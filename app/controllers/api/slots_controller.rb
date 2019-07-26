@@ -1,7 +1,8 @@
 module API
     class SlotsController < ApplicationController
       def index
-        render json: Slots.all
+        @slot = Slot.all
+        render json: @slot.as_json
       end
     end
   end

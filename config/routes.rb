@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
-  root 'pages#index'
-
-  namespace :api, defaults: { format: 'json' } do
-    resources :slots, only: :index
+  namespace :api do
+    get 'controller/slots'
   end
+  namespace :api do
+    resources :slots
+  end
+
+  get '/(*path)', to: 'pages#index'
+  get '/slots', to: 'slots#index'
+
 end

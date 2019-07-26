@@ -14,7 +14,20 @@ class slots extends Component {
   }
 
   render() {
-    return <div>Welcome to Interview Scheduler</div>;
+    var slots = this.state.slots.map(slot => {
+      return (
+        <div key={slot.id}>
+          <h1>{slot.id}</h1>
+          <p>{slot.start_time}</p>
+        </div>
+      );
+    });
+    return (
+      <div>
+        <h1> Welcome To Interview Scheduler</h1>
+        {slots}
+      </div>
+    );
   }
 }
 
